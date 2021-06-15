@@ -7,7 +7,9 @@ const forecast = (long,lat,callback) => {
        callback("Unablel to connect to the internet")
        else if(body.error)
        callback("Unable to find location")
-       else { callback(undefined,'It is currently ' + body.current.temperature+ ' but it feels like '+body.current.feelslike )
+       else {
+            
+           callback(undefined,'It is currently ' + body.current.temperature+ ' but it feels like '+body.current.feelslike+' and the humidity is '+body.current.humidity )
        }  
  })
  }
